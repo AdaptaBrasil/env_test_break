@@ -1,8 +1,14 @@
 import math
 
-add = lambda x, y: x + y
-sub = lambda x, y: x - y
-mul = lambda x, y: x * y
+def add (x, y):
+    return x + y
+
+def sub(x, y):
+    return x - y
+
+def mul(x, y):
+    return x * y
+
 def div(x, y):
     if y == 0:
         raise ValueError("Can't divide by zero")
@@ -17,12 +23,13 @@ def pow(x, y):
     return x ** y
 
 def main():
-    print(add(1, 2))
-    print(sub(1, 2))
-    print(mul(1, 2))
-    print(div(1, 2))
-    print(sqrt(4))
-    print(pow(2, 3))
+    print(f'add(1, 2) = {add(1, 2)}')
+    print(f'sub(1, 2) = {sub(1, 2)}')
+    print(f'mul(1, 2) = {mul(1, 2)}')
+    print(f'div(1, 2) = {div(1, 2)}')
+    print(f'sqrt(4) = {sqrt(4)}')
+    print(f'pow(2, 3) = {pow(2, 3)}')
+
 
 if __name__ == "__main__":
     main()
