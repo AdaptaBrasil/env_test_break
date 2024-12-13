@@ -1,5 +1,4 @@
-name: Python package
-
+name: Run Ubuntu latest with Python versions
 on: [push]
 
 jobs:
@@ -18,4 +17,6 @@ jobs:
           python-version: ${{ matrix.python-version }}
       # You can test your matrix by printing the current Python version
       - name: Display Python version
-        run: python -c "import sys; print(sys.version)"
+        run: 
+          python -c "import sys; print(sys.version)"
+          python main.py
