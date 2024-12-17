@@ -39,7 +39,7 @@ jobs:
       - name: Install config packages
         run: |
           pip install cyhunspell
-          python tester.py
+          python teste.py
           pip install enum34
           pip install coverage
           pip install ruff
