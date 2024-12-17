@@ -5,3 +5,5 @@ Repositório dedicado exclusivamente para experimentação, testes e validação
 ### Windows
 - [ ] Teste de execução de script em ambiente Windows
 - [x] Teste de execução de script em ambiente Linux
+
+A versão do Windows utilizada é a `windows-2024`.
