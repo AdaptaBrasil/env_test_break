@@ -1,4 +1,4 @@
-name: Run Ubuntu 24.04 with Python 3.9+ versions
+name: Run Windows 2024 with Python 3.9+ versions
 on: [push]
 
 jobs:
@@ -28,15 +28,11 @@ jobs:
       ## INSTALL THE NECESSARY SOFTWARES FOR YOUR PROJECT
       - name: Install WKHtmlToPdf on Ubuntu
         run: |
-          sudo apt-get update --fix-missing -y
-          sudo apt-get upgrade -y
-          sudo apt-get install -y wkhtmltopdf
+          choco install -y wkhtmltopdf  # Instala usando o Chocolatey (gerenciador de pacotes para Windows)
 
       - name: Install Hunspell on Ubuntu
         run: |
-          sudo apt-get update --fix-missing -y
-          sudo apt-get install -y libhunspell-dev
-          sudo apt-get install -y hunspell-en-us hunspell-pt-br
+          choco install -y hunspell.portable  # Instala a versão portátil do Hunspell via Chocolatey
       
       #--- DEPENDENCIES
       ## INSTALL DEPENDENCIES PYTHON
@@ -45,12 +41,15 @@ jobs:
           pip install enum34
           pip install coverage
           pip install ruff
-      
+
       - name: Install project dependencies
         run: |
           python -m pip install --upgrade pip
-          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-      
+          if (Test-Path "requirements.txt") {
+              pip install -r requirements.txt
+          }
+        shell: pwsh
+
       #--- LINT
       ## LINT YOUR CODE HERE
       - name: Lint with Ruff
@@ -69,5 +68,5 @@ jobs:
       ## RUN YOUR SCRIPT HERE
       - name: Run code with Python
         run:
-          bash scripts/run_main_pipeline.sh 
+          scripts\run_main_pipeline.bat  # Executa um script no Windows
 
