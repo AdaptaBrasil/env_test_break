@@ -1,10 +1,10 @@
-name: Run Ubuntu latest with Python 3.9+ versions
+name: Run Ubuntu 24.04 with Python 3.9+ versions
 on: [push]
 
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     strategy:
       matrix:
         python-version: ["pypy3.10", "3.9", "3.10", "3.11", "3.12", "3.13"]
