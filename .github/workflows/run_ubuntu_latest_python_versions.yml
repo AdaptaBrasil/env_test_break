@@ -29,7 +29,7 @@ jobs:
           sudo apt-get upgrade -y
           sudo apt-get install -y wkhtmltopdf
 
-      - name: Install Hunspell
+      - name: Install Hunspell on Ubuntu
         run: |
           sudo apt-get update --fix-missing -y
           sudo apt-get install -y libhunspell-dev
