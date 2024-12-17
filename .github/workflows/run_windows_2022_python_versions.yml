@@ -38,6 +38,7 @@ jobs:
       ## INSTALL DEPENDENCIES PYTHON
       - name: Install config packages
         run: |
+          pip install cyhunspell
           pip install enum34
           pip install coverage
           pip install ruff
