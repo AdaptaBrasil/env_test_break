@@ -1,10 +1,10 @@
-name: Run Windows 2024 with Python 3.9+ versions
+name: Run Windows 2022 with Python 3.9+ versions
 on: [push]
 
 jobs:
   build:
 
-    runs-on: windows-2024
+    runs-on: windows-2022
     strategy:
       matrix:
         python-version: ["3.9", "3.10", "3.11", "3.12"]
