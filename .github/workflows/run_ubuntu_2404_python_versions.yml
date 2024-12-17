@@ -15,6 +15,9 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python-version }}
+      - name: Update pip upgrade
+        run: |
+          python -m pip install --upgrade pip
 
       #--- DISPLAY PYTHON VERSION
       - name: Display Python version
