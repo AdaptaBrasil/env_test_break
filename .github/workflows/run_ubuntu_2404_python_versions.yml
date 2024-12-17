@@ -1,4 +1,4 @@
-name: Run Ubuntu 24.04 with Python 3.9+ versions
+name: Run Ubuntu 24.04.1 LTS with Python 3.9+ versions
 on: [push]
 
 jobs:

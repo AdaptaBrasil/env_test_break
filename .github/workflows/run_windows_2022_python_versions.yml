@@ -1,4 +1,4 @@
-name: Run Windows 2022 with Python 3.9+ versions
+name: Run Microsoft Windows Server 2022 with Python 3.9+ versions
 on: [push]
 
 jobs:
@@ -26,11 +26,11 @@ jobs:
       
       #--- SETUP YOUR ENVIRONMENT HERE
       ## INSTALL THE NECESSARY SOFTWARES FOR YOUR PROJECT
-      - name: Install WKHtmlToPdf on Ubuntu
+      - name: Install WKHtmlToPdf on Windows
         run: |
           choco install -y wkhtmltopdf  # Instala usando o Chocolatey (gerenciador de pacotes para Windows)
 
-      - name: Install Hunspell on Ubuntu
+      - name: Install Hunspell on Windows
         run: |
           choco install -y hunspell.portable  # Instala a versão portátil do Hunspell via Chocolatey
       
