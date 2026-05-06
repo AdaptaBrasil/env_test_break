@@ -1,6 +1,6 @@
 [project]
-name = "env-test-break"
-version = "0.1.0"
+name = "src"
+version = "0.2.0"
 description = ""
 authors = [
     {name = "Mário Carvalho",email = "mariodearaujocarvalho@gmail.com"}
@@ -12,7 +12,7 @@ dependencies = [
 ]
 
 [tool.poetry]
-packages = [{include = "env_test_break", from = "src"}]
+packages = [{include = "src"}]
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
